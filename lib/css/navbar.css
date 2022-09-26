@@ -1,0 +1,103 @@
+:root {
+	--nav-height: 160px;
+	--nav-top: 40px;
+	--nav-bottom: 10px;
+	--search-height: 46px;
+	--nav-background-color: #fff;
+	--search-color:#0072c9;
+}
+
+.app-nav {
+	/* position: fixed; */
+	background-color: var(--nav-background-color);
+	height: var(--nav-height, 140px);
+	width: 100%;
+	right: auto;
+	top: 0;
+	text-align: center;
+	margin: 0 auto;
+}
+
+.app-nav .mysearch {
+	width: 60%;
+	min-width: 420px;
+	max-width: 800PX;
+	height: var(--search-height);
+	text-align: center;
+	margin: 0 auto;
+	margin-top: var(--nav-top);
+	margin-bottom: var(--nav-bottom);
+}
+
+.app-nav .mysearch button,
+.app-nav .mysearch input {
+	font-family: Microsoft YaHei, Heiti SC, tahoma, arial, Hiragino Sans GB, "\5B8B\4F53", sans-serif;
+	outline: none;
+	line-height: 40px;
+	height: var(--search-height,40px);
+	border: 1px solid #6c6969;
+	float: left;
+}
+
+.app-nav .mysearch input:focus {
+	opacity:1;
+	border: 2px solid var(--search-color);
+}
+
+.app-nav .mysearch input {
+	width: calc(100% - 100px);
+	min-width: 200px;
+	max-width: 1600px;
+	font-size: 16px;
+	border-top-left-radius: 25px;
+	border-bottom-left-radius: 25px;
+	padding-left: 20px;
+	padding-right: 10px;
+	display: inline-block;
+	opacity:0.8;
+}
+
+.app-nav .mysearch button {
+	min-width: 100px;
+	font-size: 16px;
+	color: #fff;
+	background-color: var(--search-color);
+	border-top-right-radius: 25px;
+	border-bottom-right-radius: 25px;
+	border: 1px solid var(--search-color);
+}
+
+@media screen and (max-width: 768px) .content {
+	padding-top: var(--nav-height, 140px);
+}
+
+/* 添加导航栏后,侧边目录栏和文章内容的显示高度变化 start */
+section.content {
+	padding-top: var(--nav-height, 140px);
+}
+
+.sidebar {
+	margin-top: var(--nav-height, 140px);
+}
+/* 添加导航栏后,侧边目录栏和文章内容的显示高度变化 end */
+
+
+.app-nav table {
+	display: inline-table;
+	border-spacing: 10px;
+	border-collapse: separate;
+	text-align: center;
+	margin: 6px 0px;
+}
+
+.app-nav th,
+.app-nav td {
+	border: none;
+	background-color: var(--body-background-color);
+}
+
+.app-nav th:empty,
+.app-nav td:empty {
+	border: none;
+	padding: 0;
+}

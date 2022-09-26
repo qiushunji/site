@@ -1,0 +1,59 @@
+/* 侧边栏样式 */
+
+/* 不要侧边栏按钮 */
+.sidebar-toggle {
+	display: none;
+}
+
+.sidebar {
+	width: 15%;
+	padding: 5px 5px 5px 5px;
+	border: none;
+	text-align: center;
+	left: unset;
+	right: 0;
+}
+
+@media screen and (max-width: 768px) {
+	.sidebar {
+		right: -15%;
+		transition: transform 250ms ease-out;
+	}
+}
+
+.sidebar a>img:hover{
+	box-shadow: 8px 8px 8px #A0A0A0;
+} 
+
+.sidebar .sidebar-nav {
+	border-radius: 10px;
+	padding: 10px;
+	display: inline-block;
+}
+
+.sidebar-nav h1,
+.sidebar-nav h2,
+.sidebar-nav h3,
+.sidebar-nav h4,
+.sidebar-nav h5,
+.sidebar-nav h6 {
+	text-align: center;
+}
+
+.sidebar-nav a {
+	color: #a0a0a0;
+	text-decoration: none;
+	white-space: nowrap;
+}
+
+.sidebar-nav a:hover {
+	cursor: pointer;
+	color: var(--theme-color, #0053fa);
+	font-weight: 600;
+}
+
+/* 侧边栏改变后，重新定义主体内容的布局 */
+section.content {
+	left: 0;
+	display: flex;
+}

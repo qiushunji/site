@@ -1,0 +1,51 @@
+:root {
+	--background-color: #ffffff;
+	--color: #aaaaaa;
+	--footer-height: 42px;
+	--footer-font-size: 14px;
+}
+
+footer {
+	width: 100%;
+	height: var(--footer-height);
+	float: right;
+	text-align: center;
+	background-color: var(--background-color);
+	position:fixed;
+	bottom:0;
+}
+
+
+footer p {
+	color: var(--color);
+	font-size: var(--footer-font-size);
+	line-height: var(--footer-font-size);
+	margin: calc((var(--footer-height) - var(--footer-font-size))/2) 0px;
+	text-align: center;
+}
+
+footer a{
+	color: var(--color);
+	font-size: var(--footer-font-size);
+	text-decoration: none;
+	text-align: center;
+}
+
+.markdown-section footer a:hover {
+	color: #292929;
+}
+
+.sidebar {
+	margin-bottom: var(--footer-height);
+}
+
+/* 主体内容的显示 start*/
+article.markdown-section {
+	padding-bottom: var(--footer-height);
+}
+
+body{
+	margin-bottom: var(--footer-height);
+	height: calc(100% - var(--footer-height));
+}
+/* 主体内容的显示 end*/

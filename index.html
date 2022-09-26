@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>个人技术导航网站</title>
+		<link rel="shortcut icon" href="./lib/images/favicon.ico">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+		<meta name="referrer" content="no-referrer" />
+		<meta name="description" content="程序员的专属导航网站">
+		<meta name="viewport"
+			content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+		<link rel="stylesheet" href="./lib/css/vue.min@5.2.2.min.css">
+		<link rel="stylesheet" href="./lib/css/navbar.css">
+		<link rel="stylesheet" href="./lib/css/footer.css">
+		<link rel="stylesheet" href="./lib/css/tabs.css">
+		<link rel="stylesheet" href="./lib/css/sidebar.css">
+		<link rel="stylesheet" href="./lib/css/index.css">
+		
+	</head>
+	<body>
+		<div id="app">努力改变命运，态度改变人生</div>
+		
+		<style type="text/css">
+			body {
+				opacity: 0.01;
+				transition: opacity 0.5s;
+				background-color: #FFF;
+			}
+		</style>
+		<script type="text/javascript">
+			setTimeout(function() {
+				document.body.style.opacity = 1;
+			}, 1);
+		</script>
+		
+		<script src="./lib/js/jquery@1.10.2.min.js"></script>
+		<script src="./lib/js/index-plugin.js"></script>
+		
+		<script>
+			window.$docsify = {
+				homepage: 'README.md',
+				themeColor: '#007dbc', //主题颜色
+				loadNavbar: 'navbar.md',
+				loadNavCover: false, //首页导航栏显示
+				loadSidebar: 'sidebar.md',
+				maxLevel: 1,
+				externalLinkTarget: '_blank',
+				coverpage: 'guide.md',
+				onlyCover: true,
+				loadFooter: 'footer.md',
+				notFoundPage: '404.md',
+				autoHeader: true,
+				topMargin: 160,
+				tabs: { //read paper: https://jhildenbiddle.github.io/docsify-tabs/#/
+					persist: false, //刷新页面时重置选项卡，实际上我测试的是false是重置
+					sync: false, //页面上的多个tab是否同步切换
+					theme: 'classic', //主题：'classic', 'material', false
+					tabComments: false, //用注释来标注选项卡标题，例如：<!-- tab:SpringBoot  -->
+					tabHeadings: true //用标题+粗体来定制选项卡
+				},
+				'flexible-alerts': { //read paper https://www.npmjs.com/package/docsify-plugin-flexible-alerts
+					style: 'callout', //callout or flat
+					note: {
+						label: "Hinweis"
+					},
+					tip: {
+						label: "Tipp"
+					},
+					warning: {
+						label: "Warnung"
+					},
+					attention: {
+						label: "Achtung"
+					}
+				},
+				plugins: [myDocsifyPlugin], // 自定义插件
+				
+			}
+		</script>
+		
+		<script src="./lib/js/docsify@4.12.2.min.js"></script>
+		<script src="./lib/js/index.js"></script>
+		<script src="./lib/js/docsify-tabs@1.5.2.min.js"></script>
+		<script src="./lib/js/docsify-plugin-flexible-alerts.min.js"></script>
+		<script src="./lib/js/footer.js"></script>
+		
+		<script src="./lib/js/jquery.goup@1.1.3.js"></script>
+		<script type="text/javascript">
+			$(document).ready(function() {//回到顶部效果
+				$.goup({
+					trigger: 100,
+					bottomOffset: 52,
+					locationOffset: 25,
+					title: 'TOP',
+					titleAsText: true
+				});
+			});
+		</script>
+
+		<script>
+			if (typeof navigator.serviceWorker !== 'undefined') {
+				navigator.serviceWorker.register('./lib/js/pwa.js')
+			}
+		</script>
+	</body>
+</html>
